@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mara_english_dictionary/screen/search_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,7 +12,12 @@ class HomeScreen extends StatelessWidget {
           automaticallyImplyLeading: false,
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SearchScreen()),
+                );
+              },
               icon: const Icon(Icons.search),
             )
           ],
