@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mara_english_dictionary/screens/home_screen.dart';
+import 'package:mara_english_dictionary/service_locator.dart';
 
 void main() {
+  setupGetIt();
   runApp(const MyApp());
 }
 

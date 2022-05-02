@@ -23,16 +23,32 @@ class SearchScreen extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: ((context) => const TitleScreen())));
+                          builder: ((context) => const WordListScreen(
+                                prefix: 'a',
+                              ))));
                 },
                 child: Text('a'),
               ),
               OutlinedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => const WordListScreen(
+                                prefix: 'b',
+                              ))));
+                },
                 child: Text('b'),
               ),
               OutlinedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => const WordListScreen(
+                                prefix: 'c',
+                              ))));
+                },
                 child: Text('c'),
               ),
               OutlinedButton(
