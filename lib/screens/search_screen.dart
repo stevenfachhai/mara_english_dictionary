@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mara_english_dictionary/screen/title_screen.dart';
+import 'package:mara_english_dictionary/screens/word_list_screen/word_list_screen.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -9,17 +9,22 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          TextField(
+          const TextField(
             decoration: InputDecoration(
               suffixIcon: Icon(Icons.search),
               border: OutlineInputBorder(),
-              hintText: 'Search Tech Talk',
+              hintText: 'Enter the word to search',
             ),
           ),
           Wrap(
             children: [
               OutlinedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => const TitleScreen())));
+                },
                 child: Text('a'),
               ),
               OutlinedButton(
